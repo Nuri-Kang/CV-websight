@@ -11,17 +11,38 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .pdf-container {
             width: 100%;
             height: 100vh;
         }
+        @media (max-width: 768px) { 
+            /* 모바일에서는 object 태그 사용 */
+            .pdf-container {
+                display: none;
+            }
+            .mobile-container {
+                display: block;
+                width: 100%;
+                height: 100vh;
+            }
+        }
+        @media (min-width: 769px) { 
+            /* PC에서는 embed 태그 사용 */
+            .mobile-container {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <object class="pdf-container" data="Curriculum_Vitae.pdf" type="application/pdf">
-        <p>📄 PDF 파일을 볼 수 없는 경우, <a href="Curriculum_Vitae.pdf" target="_blank">여기를 클릭하여 직접 열어보세요.</a></p>
-    </object>
+    <!-- PC에서는 embed 방식 유지 -->
+    <embed class="pdf-container" src="Curriculum_Vitae.pdf" type="application/pdf">
+
+    <!-- 모바일에서는 object 방식 사용 (페이지 넘김 가능) -->
+    <object class="mobile-container" data="Curriculum_Vitae.pdf" type="application/pdf"></object>
 </body>
 </html>
-
