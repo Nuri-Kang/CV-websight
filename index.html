@@ -10,18 +10,26 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
-        embed {
+        .pdf-container {
             width: 100%;
             height: 100vh;
+        }
+        .pdf-link {
+            font-size: 20px;
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <embed src="Curriculum_Vitae.pdf" type="application/pdf">
+    <div class="pdf-container">
+        <p>📄 <a href="Curriculum_Vitae.pdf" class="pdf-link" target="_blank">Click here to view the full PDF</a></p>
+    </div>
 </body>
 </html>
