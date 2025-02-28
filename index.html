@@ -10,39 +10,18 @@
             padding: 0;
             width: 100%;
             height: 100%;
+            overflow: hidden;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
-        iframe {
+        embed {
             width: 100%;
             height: 100vh;
-            border: none;
-            overflow: auto; /* PDF 스크롤 가능하도록 설정 */
-        }
-        .mobile-link {
-            display: none;
-            margin-top: 10px;
-            font-size: 18px;
-            text-align: center;
-        }
-        @media (max-width: 768px) { 
-            iframe {
-                height: 80vh; /* 모바일에서 여백 확보 */
-                overflow: auto;
-            }
-            .mobile-link {
-                display: block;
-            }
         }
     </style>
 </head>
 <body>
-    <iframe src="Curriculum_Vitae.pdf" scrolling="yes"></iframe>
-    <p class="mobile-link">
-        📄 PDF가 제대로 보이지 않는다면 👉 
-        <a href="Curriculum_Vitae.pdf" target="_blank">여기에서 직접 열기</a>
-    </p>
+    <embed src="Curriculum_Vitae.pdf" type="application/pdf">
 </body>
 </html>
