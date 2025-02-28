@@ -10,26 +10,18 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow: hidden;
         }
         .pdf-container {
             width: 100%;
             height: 100vh;
         }
-        .pdf-link {
-            font-size: 20px;
-            color: blue;
-            text-decoration: underline;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <p>📄 <a href="Curriculum_Vitae.pdf" class="pdf-link" target="_blank">Click here to view the full PDF</a></p>
-    </div>
+    <object class="pdf-container" data="Curriculum_Vitae.pdf" type="application/pdf">
+        <p>📄 PDF 파일을 볼 수 없는 경우, <a href="Curriculum_Vitae.pdf" target="_blank">여기를 클릭하여 직접 열어보세요.</a></p>
+    </object>
 </body>
 </html>
+
